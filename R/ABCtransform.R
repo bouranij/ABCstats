@@ -52,7 +52,7 @@ ABCtransform = function(FeatureTable, Impt="default", LambdaRange=c(-3,3),
   }
 
   # Change all gaps to NA, change values to be numeric
-  IntTable = FeatureTable[-1,-1]
+  IntTable = FeatureTable
   IntTable[IntTable == GapIdentifier] = NA
   IntTable = as.data.frame(sapply(IntTable, as.numeric))
 
